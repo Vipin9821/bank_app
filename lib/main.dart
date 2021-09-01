@@ -24,9 +24,11 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         themeMode: ThemeMode.dark,
-        darkTheme: ThemeData(canvasColor: kGlobalCanvasColor,
+        darkTheme: ThemeData(
+          canvasColor: kGlobalCanvasColor,
           fontFamily: fontFamily,
-          brightness: Brightness.dark
+          brightness: Brightness.dark,
+          accentColor: kPinkAccentColor,
         ),
         home: SplashScreen(),
         onGenerateRoute: RouteGenerator.generateRoute,

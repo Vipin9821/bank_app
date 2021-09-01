@@ -6,3 +6,5 @@ Color kPinkAccentColor = Color(0xfff6c6c2);
 Color kBlueAccentColor = Color(0xffa4a1d9);
 
 Color kGlobalCanvasColor = Color(0xff211f27);
+
+Color kCarouselbackgroundColor = Color(0xff38373e);

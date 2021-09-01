@@ -1,6 +1,7 @@
 import 'package:bank_app/screens/boarding_screen.dart';
 import 'package:bank_app/screens/main_screen.dart';
 import 'package:bank_app/screens/splash_screen.dart';
+import 'package:bank_app/screens/stats_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
@@ -22,6 +23,12 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) {
             return MainScreen();
+          },
+        );
+           case StatsDetailScreen.routeName:
+        return MaterialPageRoute(
+          builder: (_) {
+            return StatsDetailScreen();
           },
         );
         // break;
