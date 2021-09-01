@@ -1,8 +1,8 @@
 import 'package:bank_app/repositories/stats_overview_repo.dart';
 import 'package:bank_app/utils/constants/col0r_contants.dart';
+import 'package:bank_app/utils/constants/widget_contants.dart';
 import 'package:bank_app/widgets/rounded_var.dart';
 import 'package:bank_app/widgets/stats_screen/stats_goal.dart';
-import 'package:charts_flutter/flutter.dart';
 import 'package:flutter/material.dart';
 
 class StatsDetailScreen extends StatelessWidget {
@@ -27,7 +27,7 @@ class StatsDetailScreen extends StatelessWidget {
                 ),
                 Text(
                   "Statistics",
-                  style: TextStyle(fontSize: 21),
+                  style: kStatisticsTextStyle,
                 ),
                 Container(
                   width: 50,
@@ -46,7 +46,7 @@ class StatsDetailScreen extends StatelessWidget {
                   margin: const EdgeInsets.all(15),
                   child: Text(
                     "Overview",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800),
+                    style:kOverViewTextStyle,
                   )),
             ),
             SliverGrid(
@@ -71,10 +71,10 @@ class StatsDetailScreen extends StatelessWidget {
                             _data.icon,
                             color: kPinkAccentColor,
                           ),
-                          Text(_data.amount.toString(),),
+                          Text(_data.amount.toString(),style: kAmountTextStyle,),
                         ],
                       ),
-                      Text(_data.label.toString())
+                      Text(_data.label.toString(),style:kLabelTextStyle)
                     ],
                   ),
                 );

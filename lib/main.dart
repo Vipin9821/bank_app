@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
+        title: "Assigned Task",
         themeMode: ThemeMode.dark,
         darkTheme: ThemeData(
           canvasColor: kGlobalCanvasColor,

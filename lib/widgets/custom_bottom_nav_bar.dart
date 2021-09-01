@@ -4,11 +4,10 @@ import 'package:bank_app/utils/constants/col0r_contants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-// ignore: must_be_immutable
 class CustomButtomNavBar extends StatefulWidget {
   final List<NavBarItems>? navBarItems;
   final Function? onPressed;
-  Duration animationDuration = Duration(milliseconds: 300);
+  final Duration animationDuration = Duration(milliseconds: 300);
   CustomButtomNavBar({
     @required this.navBarItems,
     @required this.onPressed,
@@ -30,12 +29,8 @@ class _CustomButtomNavBarState extends State<CustomButtomNavBar>
       elevation: 10.0,
       color: Theme.of(context).canvasColor,
       child: Container(
-        height: 65,
+        height:75,
         decoration: BoxDecoration(
-          // color: Theme.of(context).brightness == Brightness.dark
-          //     ? Colors.grey[900]
-          //     : Colors.white,
-
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(40),
             topRight: Radius.circular(40.0),
@@ -71,15 +66,23 @@ class _CustomButtomNavBarState extends State<CustomButtomNavBar>
           },
           child: Container(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SvgPicture.asset(
                     barItems.imagePath!,
                     color: isSelected ? kPinkAccentColor : Colors.grey,
-                    height: isSelected? 30:20,
+                    height: isSelected ? 30 : 20,
                   ),
-                )
+                ),
+                isSelected
+                    ? SvgPicture.asset(
+                        "assets/indicator.svg",
+                        height: 8,
+                        color: kPinkAccentColor,
+                      )
+                    : Container()
               ],
             ),
           ),
