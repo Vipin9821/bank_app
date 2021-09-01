@@ -18,7 +18,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       yield SplashLoadingState();
       try {
         //just for demontration
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(Duration(seconds: 2));
         yield SplashLoadedState();
       } catch (e) {
         yield SplashErrorState();
